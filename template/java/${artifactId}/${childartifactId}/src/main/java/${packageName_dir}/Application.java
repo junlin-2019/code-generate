@@ -1,7 +1,7 @@
-package ${packageName};
-
-import org.springframework.boot.SpringApplication;
+package $ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+{packageName};
 /**
  * @author seed
  *

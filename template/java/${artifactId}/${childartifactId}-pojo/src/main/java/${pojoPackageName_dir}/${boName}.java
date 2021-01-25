@@ -1,6 +1,8 @@
-package ${pojoPackageName};
+package $ import lombok.Data;
 
-<#assign pojoNames='' />
+{pojoPackageName};
+
+<#assign pojoNames=''/>
 <#assign bigDecimal=false>
 <#assign listUtile=false>
 <#assign mapUtile=false>
@@ -23,18 +25,13 @@ package ${pojoPackageName};
 </#list>
 </#if>
 <#if bigDecimal>
-import java.math.BigDecimal;
 </#if>
 <#if listUtile>
-import java.util.List;
 </#if>
 <#if mapUtile>
-import java.util.Map;
 </#if>
 <#if dateUtile>
-import java.util.Date;
 </#if>
-import lombok.Data;
 
 @Data
 public class ${boName}{
