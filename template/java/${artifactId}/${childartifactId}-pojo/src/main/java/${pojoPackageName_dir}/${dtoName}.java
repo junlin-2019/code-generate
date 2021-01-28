@@ -1,40 +1,37 @@
-package ${pojoPackageName};
+package $ import lombok.Data;
 
-        <#assign pojoNames='' />
-        <#assign bigDecimal=false>
-        <#assign listUtile=false>
-        <#assign mapUtile=false>
-        <#assign dateUtile=false>
+{pojoPackageName};
 
-        <#if pojoInfo.pojoParams??>
-        <#list pojoInfo.pojoParams as paraminfo>
-        <#if paraminfo.dataType?contains('BigDecimal')>
-        <#assign bigDecimal=true>
-        </#if>
-        <#if paraminfo.dataType?contains('List')>
-        <#assign listUtile=true>
-        </#if>
-        <#if paraminfo.dataType?contains('Map')>
-        <#assign mapUtile=true>
-        </#if>
-        <#if paraminfo.dataType?contains('Date')>
-        <#assign dateUtile=true>
-        </#if>
-        </#list>
-        </#if>
-        <#if bigDecimal>
-import java.math.BigDecimal;
+<#assign pojoNames=''/>
+<#assign bigDecimal=false>
+<#assign listUtile=false>
+<#assign mapUtile=false>
+<#assign dateUtile=false>
+
+<#if pojoInfo.pojoParams??>
+<#list pojoInfo.pojoParams as paraminfo>
+<#if paraminfo.dataType?contains('BigDecimal')>
+<#assign bigDecimal=true>
 </#if>
-        <#if listUtile>
-import java.util.List;
+<#if paraminfo.dataType?contains('List')>
+<#assign listUtile=true>
 </#if>
-        <#if mapUtile>
-import java.util.Map;
+<#if paraminfo.dataType?contains('Map')>
+<#assign mapUtile=true>
 </#if>
-        <#if dateUtile>
-import java.util.Date;
+<#if paraminfo.dataType?contains('Date')>
+<#assign dateUtile=true>
 </#if>
-import lombok.Data;
+</#list>
+</#if>
+<#if bigDecimal>
+</#if>
+<#if listUtile>
+</#if>
+<#if mapUtile>
+</#if>
+<#if dateUtile>
+</#if>
 
 
 @Data
